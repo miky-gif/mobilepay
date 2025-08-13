@@ -624,7 +624,12 @@ section,
     scroll-margin-top: 66px;
   }
 }
-
+@media (max-width: 1000px)
+{
+.hero{
+      padding: 65px 0 30px 0 !important
+}
+}
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
