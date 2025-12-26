@@ -1,0 +1,47 @@
+/* Fix pour afficher la section contact sur desktop */
+
+/* Force l'affichage de la section contact sur toutes les tailles d'écran */
+#contact.contact.section {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-height: 100vh;
+  padding: 80px 0;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* S'assurer que le container est visible */
+#contact .container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* S'assurer que tous les éléments enfants sont visibles */
+#contact * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Fix pour les animations AOS qui pourraient cacher les éléments */
+#contact [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* S'assurer que la section est au-dessus de la section précédente */
+#coming-soon {
+  position: relative;
+  z-index: 0;
+}
+
+/* Media query pour desktop */
+@media (min-width: 768px) {
+  #contact.contact.section {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
