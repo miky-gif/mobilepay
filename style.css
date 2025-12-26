@@ -1,3 +1,50 @@
+/* Custom styles for moobilpay */
+
+/* ===== LOGO HEADER ===== */
+.logo-img {
+  height: 65px;
+  width: auto;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+  display: block;
+  object-fit: contain;
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0;
+}
+
+.logo .sitename {
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 45px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 38px;
+    margin-right: 8px;
+  }
+  
+  .sitename {
+    font-size: 1.3rem !important;
+  }
+}
+
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher-container {
   margin-left: 15px;
