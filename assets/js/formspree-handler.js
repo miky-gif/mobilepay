@@ -46,7 +46,7 @@
 
                 // If Formspree provides a redirect path, follow it
                 if (data && data.next) {
-                    const nextUrl = new URL(data.next, window.location.origin);
+                    const nextUrl = new URL(data.next, form.action);
                     window.location.href = nextUrl.toString();
                     return;
                 }
