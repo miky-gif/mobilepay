@@ -94,8 +94,9 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 450,
       easing: 'ease-in-out',
+      offset: 200,
       once: true,
       mirror: false
     });
@@ -117,6 +118,13 @@
         new Swiper(swiperElement, config);
       }
     });
+
+    if (window.AOS) {
+      AOS.refresh();
+      setTimeout(() => {
+        AOS.refreshHard();
+      }, 250);
+    }
   }
 
   window.addEventListener("load", initSwiper);
