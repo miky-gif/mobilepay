@@ -93,7 +93,7 @@
           <li><a href="#features" data-i18n="nav_features">Fonctionnalités</a></li>
           <li><a href="#pricing" data-i18n="nav_pricing">Plans</a></li>
           <li><a href="#coming-soon" data-i18n="nav_launch">Lancement</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="support.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -919,30 +919,93 @@ Pour toute question supplémentaire, contactez-nous à contact@moobilpay.com</p>
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">moobilpay</h3>
-      <p data-i18n="footer_desc">moobilpay facilite votre vis dans le monde du streaming et autre service de paiements.</p>
-      <div class="social-links d-flex justify-content-center">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
-        <a href="https://www.facebook.com/profile.php?id=61585335707804" target="_blank" title="Page Facebook MoobilPay"><i class="bi bi-facebook"></i></a>
-        <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
-        <!-- <a href=""><i class="bi bi-skype"></i></a> -->
-        <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
-      </div>
-      <div class="text-center mt-4 mb-2">
-        <a href="politique-confidentialite.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255, 255, 255, 0.7)'">Politique de confidentialité</a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span data-i18n="footer_copyright_prefix">Avec </span> <strong class="px-1 sitename">moobilpay</strong> <span data-i18n="footer_copyright_suffix">profitez d'un service simple et rapide</span>
+  <!-- ======== Footer ======== -->
+  <footer id="footer" class="footer position-relative" style="background: linear-gradient(145deg, #b01826 0%, #d81e2f 100%); color: #ffffff; overflow: hidden; padding-top: 80px; padding-bottom: 30px;">
+    
+    <!-- Beautiful Background Shapes for Depth -->
+    <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; filter: blur(20px);"></div>
+    <div style="position: absolute; bottom: -100px; left: -50px; width: 400px; height: 400px; background: rgba(0,0,0,0.05); border-radius: 50%;"></div>
+
+    <div class="container position-relative z-form">
+      <div class="row gy-5">
+        <!-- Brand & Description -->
+        <div class="col-lg-4 col-md-6 footer-about pe-lg-5">
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-4" style="display: inline-block;">
+             <img src="assets/img/logo acuueil.png" alt="Moobilpay" style="max-height: 50px; margin-right: 12px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));">
+             <span class="sitename" style="font-size: 30px; font-weight: 800; color: #ffffff; text-transform: lowercase; letter-spacing: -0.5px; text-shadow: 0px 2px 4px rgba(0,0,0,0.3);">moobilpay</span>
+          </a>
+          <p class="mb-4" data-i18n="footer_desc" style="font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9);">
+            Votre partenaire de confiance pour des paiements simples, rapides et sécurisés. Profitez de vos services de streaming sans tracas.
+          </p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=61585335707804" target="_blank" title="Rejoignez-nous sur Facebook" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 12px; background: rgba(255, 255, 255, 0.15); font-size: 20px; color: #fff; margin-right: 15px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#c51b2b'; this.style.transform='translateY(-5px) scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.color='#fff'; this.style.transform='translateY(0) scale(1)';">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          <!-- développé par <a href="https://wawomic@gmail.com/">Wawo Domguia</a> & <a href="https://tchindavaldoblair@gmail.com/">Tchinda Valdo </a> -->
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Liens utiles</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="index.html#hero" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Accueil</a></li>
+            <li><a href="index.html#about" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">À propos</a></li>
+            <li><a href="index.html#features" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Fonctionnalités</a></li>
+            <li><a href="index.html#pricing" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Privacy & Support -->
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Assistance</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="politique-confidentialite.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Politique de confidentialité</a></li>
+            <li><a href="support.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Support Client</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-12 footer-contact text-md-start">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Contact</h4>
+          
+          <div style="display: flex; align-items: flex-start; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px; margin-top: 2px;">
+              <i class="bi bi-geo-alt" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <div>
+              <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.5;">Ngousso, Centre 1200<br>Yaoundé, Cameroun</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-telephone" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">+237 698 178 925</p>
+          </div>
+
+          <div style="display: flex; align-items: center;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-envelope" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">contact@moobilpay.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 30px;">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="copyright" style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            &copy; 2026 <strong>Moobilpay</strong>. Tous droits réservés.
+          </div>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            <span data-i18n="footer_copyright_prefix">Avec</span> <strong style="color: #fff; font-weight: 700;">moobilpay</strong> <span data-i18n="footer_copyright_suffix">profitez d'un service simple et rapide</span>
+          </div>
         </div>
       </div>
     </div>

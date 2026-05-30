@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Support & Assistance - MoobilPay</title>
+  <meta content="Page de support et assistance pour l'application MoobilPay" name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <style>
+    /* ── Page Header ── */
+    .support-page-header {
+      background: #ffffff;
+      border-top: 4px solid #37517e;
+      border-bottom: 1px solid #e8eaed;
+      padding: 108px 0 44px;
+      box-shadow: 0 2px 16px rgba(55, 81, 126, 0.06);
+    }
+    .support-page-header .ph-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    /* Breadcrumb */
+    .support-page-header .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: #9aa3b0;
+      margin-bottom: 18px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .support-page-header .breadcrumb-nav a {
+      color: #9aa3b0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .support-page-header .breadcrumb-nav a:hover { color: #37517e; }
+    .support-page-header .breadcrumb-sep {
+      color: #ccd0d8;
+      font-size: 0.8rem;
+    }
+    .support-page-header .breadcrumb-current {
+      color: #37517e;
+      font-weight: 500;
+    }
+    /* Title block */
+    .ph-title-block {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .ph-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f0f3f8;
+      border: 1px solid #dde3ee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #37517e;
+      flex-shrink: 0;
+    }
+    .ph-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e2d45;
+      font-family: 'Raleway', sans-serif;
+      margin: 0 0 4px;
+      line-height: 1.2;
+    }
+    .ph-text h1 span.ph-accent {
+      display: inline-block;
+      width: 36px;
+      height: 3px;
+      background: #37517e;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-bottom: 6px;
+    }
+    /* Date badge / subtitle */
+    .ph-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: #8a95a3;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 2px;
+    }
+    .ph-date i { font-size: 0.85rem; color: #37517e; }
+    @media (max-width: 576px) {
+      .ph-text h1 { font-size: 1.45rem; }
+      .ph-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+      .support-page-header { padding: 100px 0 32px; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- ======== Header ======== -->
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #c51b2b;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo acuueil.png" alt="moobilpay logo" class="logo-img">
+        <h1 class="sitename">moobilpay</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">A propos</a></li>
+          <li><a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a></li>
+          <li><a href="index.html#pricing" data-i18n="nav_pricing">Plans</a></li>
+          <li><a href="index.html#coming-soon" data-i18n="nav_launch">Lancement</a></li>
+          <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher-container">
+        <button type="button" id="lang-switcher" class="lang-switcher" title="Changer de langue / Change language">
+          <span class="lang-flag">🇫🇷</span>
+          <span class="lang-text">FR</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ======== Page Header ======== -->
+    <div class="support-page-header">
+      <div class="container">
+        <div class="ph-inner">
+
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <a href="index.html"><i class="bi bi-house-door-fill"></i>Accueil</a>
+            <i class="bi bi-chevron-right breadcrumb-sep"></i>
+            <span class="breadcrumb-current">Support & Assistance</span>
+          </nav>
+
+          <!-- Title -->
+          <div class="ph-title-block">
+            <div class="ph-icon">
+              <i class="bi bi-headset"></i>
+            </div>
+            <div class="ph-text">
+              <h1>Support & Assistance<span class="ph-accent"></span></h1>
+              <div class="ph-date">
+                <i class="bi bi-clock"></i>
+                Nous vous répondons dans les plus brefs délais
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== Contact Section ======== -->
+    <section id="contact" class="contact section" style="padding: 80px 0; background: #fff;">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p data-i18n="contact_subtitle">Posez votre problème auprès de notre assistance</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3 data-i18n="contact_address">Address</h3>
+                <p>Ngousso, Centre 1200, Yaoundé, Cameroun</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="150">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3 data-i18n="contact_tel">Tel</h3>
+                <p>+237 698 178 925</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3 data-i18n="contact_email">Email</h3>
+                <p>contact@moobilpay.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="250">
+              <i class="bi bi-whatsapp flex-shrink-0" style="color: #25D366;"></i>
+              <div>
+                <h3 data-i18n="contact_whatsapp">Groupe WhatsApp</h3>
+                <p><a href="https://chat.whatsapp.com/J5KaIQH02NpBa1lNnfcfpB" target="_blank" style="color: #47b2e4;">Rejoindre la communauté</a></p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="https://formspree.io/f/mwvkkqyv" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" data-i18n="contact_your_name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" data-i18n="contact_your_email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" data-i18n="contact_subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" data-i18n="contact_message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading" data-i18n="contact_loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message" data-i18n="contact_sent">Votre message a été envoyé. Merci !</div>
+
+                  <button type="submit" data-i18n="contact_send">Envoyer le message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <!-- ======== Footer ======== -->
+  <footer id="footer" class="footer position-relative" style="background: linear-gradient(145deg, #b01826 0%, #d81e2f 100%); color: #ffffff; overflow: hidden; padding-top: 80px; padding-bottom: 30px;">
+    
+    <!-- Beautiful Background Shapes for Depth -->
+    <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; filter: blur(20px);"></div>
+    <div style="position: absolute; bottom: -100px; left: -50px; width: 400px; height: 400px; background: rgba(0,0,0,0.05); border-radius: 50%;"></div>
+
+    <div class="container position-relative z-form">
+      <div class="row gy-5">
+        <!-- Brand & Description -->
+        <div class="col-lg-4 col-md-6 footer-about pe-lg-5">
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-4" style="display: inline-block;">
+             <img src="assets/img/logo acuueil.png" alt="Moobilpay" style="max-height: 50px; margin-right: 12px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));">
+             <span class="sitename" style="font-size: 30px; font-weight: 800; color: #ffffff; text-transform: lowercase; letter-spacing: -0.5px; text-shadow: 0px 2px 4px rgba(0,0,0,0.3);">moobilpay</span>
+          </a>
+          <p class="mb-4" data-i18n="footer_desc" style="font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9);">
+            Votre partenaire de confiance pour des paiements simples, rapides et sécurisés. Profitez de vos services de streaming sans tracas.
+          </p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=61585335707804" target="_blank" title="Rejoignez-nous sur Facebook" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 12px; background: rgba(255, 255, 255, 0.15); font-size: 20px; color: #fff; margin-right: 15px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#c51b2b'; this.style.transform='translateY(-5px) scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.color='#fff'; this.style.transform='translateY(0) scale(1)';">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Liens utiles</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="index.html#hero" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Accueil</a></li>
+            <li><a href="index.html#about" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">À propos</a></li>
+            <li><a href="index.html#features" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Fonctionnalités</a></li>
+            <li><a href="index.html#pricing" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Privacy & Support -->
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Assistance</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="politique-confidentialite.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Politique de confidentialité</a></li>
+            <li><a href="support.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Support Client</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-12 footer-contact text-md-start">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Contact</h4>
+          
+          <div style="display: flex; align-items: flex-start; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px; margin-top: 2px;">
+              <i class="bi bi-geo-alt" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <div>
+              <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.5;">Ngousso, Centre 1200<br>Yaoundé, Cameroun</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-telephone" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">+237 698 178 925</p>
+          </div>
+
+          <div style="display: flex; align-items: center;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-envelope" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">contact@moobilpay.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 30px;">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="copyright" style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            &copy; 2026 <strong>Moobilpay</strong>. Tous droits réservés.
+          </div>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            <span data-i18n="footer_copyright_prefix">Avec</span> <strong style="color: #fff; font-weight: 700;">moobilpay</strong> <span data-i18n="footer_copyright_suffix">profitez d'un service simple et rapide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Translation System -->
+  <script src="assets/js/translations.js"></script>
+
+  <!-- Formspree Form Handler -->
+  <script src="assets/js/formspree-handler.js"></script>
+
+</body>
+
+</html>

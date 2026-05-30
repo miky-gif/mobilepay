@@ -1,118 +1,909 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Politique de Confidentialité - MoobilPay</title>
   <meta content="Politique de confidentialité de l'application MoobilPay" name="description">
-  
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  
+
   <style>
-    .privacy-content {
-      padding: 60px 0;
+    /* ── Page Header ── */
+    .privacy-page-header {
+      background: #ffffff;
+      border-top: 4px solid #37517e;
+      border-bottom: 1px solid #e8eaed;
+      padding: 108px 0 44px;
+      box-shadow: 0 2px 16px rgba(55, 81, 126, 0.06);
     }
-    .privacy-content h2 {
-      margin-top: 30px;
-      margin-bottom: 15px;
-      color: #1a1a1a;
+    .privacy-page-header .ph-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
-    .privacy-content p, .privacy-content ul {
-      margin-bottom: 20px;
-      color: #444;
-      line-height: 1.6;
+    /* Breadcrumb */
+    .privacy-page-header .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: #9aa3b0;
+      margin-bottom: 18px;
+      font-family: 'Poppins', sans-serif;
     }
-    .privacy-content ul {
-      padding-left: 20px;
-    }
-    .back-link {
-      margin-top: 40px;
-      display: inline-block;
-      color: #47b2e4;
+    .privacy-page-header .breadcrumb-nav a {
+      color: #9aa3b0;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .privacy-page-header .breadcrumb-nav a:hover { color: #37517e; }
+    .privacy-page-header .breadcrumb-sep {
+      color: #ccd0d8;
+      font-size: 0.8rem;
+    }
+    .privacy-page-header .breadcrumb-current {
+      color: #37517e;
+      font-weight: 500;
+    }
+    /* Title block */
+    .ph-title-block {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .ph-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f0f3f8;
+      border: 1px solid #dde3ee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #37517e;
+      flex-shrink: 0;
+    }
+    .ph-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e2d45;
+      font-family: 'Raleway', sans-serif;
+      margin: 0 0 4px;
+      line-height: 1.2;
+    }
+    .ph-text h1 span.ph-accent {
+      display: inline-block;
+      width: 36px;
+      height: 3px;
+      background: #37517e;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-bottom: 6px;
+    }
+    /* Date badge */
+    .ph-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #8a95a3;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 2px;
+    }
+    .ph-date i { font-size: 0.78rem; color: #37517e; }
+    @media (max-width: 576px) {
+      .ph-text h1 { font-size: 1.45rem; }
+      .ph-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+      .privacy-page-header { padding: 100px 0 32px; }
+    }
+
+    /* ── Layout ── */
+    .privacy-section {
+      padding: 70px 0 80px;
+      background: #f8f9fa;
+    }
+
+    /* ── Sidebar TOC ── */
+    .privacy-toc {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      position: sticky;
+      top: 90px;
+    }
+    .privacy-toc h5 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #37517e;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e4e6ea;
+    }
+    .privacy-toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .privacy-toc ul li {
+      margin-bottom: 2px;
+    }
+    .privacy-toc ul li a {
+      color: #555;
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 8px;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .privacy-toc ul li a i {
+      color: #aaa;
+      font-size: 0.6rem;
+      min-width: 12px;
+    }
+    .privacy-toc ul li a:hover {
+      background: #f2f3f5;
+      color: #2d3e5c;
+      padding-left: 14px;
+    }
+
+    /* ── Content Card ── */
+    .privacy-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 38px 38px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .privacy-card .section-anchor {
+      scroll-margin-top: 90px;
+    }
+
+    .privacy-card h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2d3e5c;
+      margin-top: 38px;
+      margin-bottom: 14px;
+      padding-left: 14px;
+      border-left: 3px solid #37517e;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .privacy-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .privacy-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #37517e;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .privacy-card p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 0.96rem;
+    }
+    .privacy-card ul, .privacy-card ol {
+      color: #555;
+      line-height: 1.8;
+      padding-left: 0;
+      margin-bottom: 20px;
+      list-style: none;
+    }
+    .privacy-card ul li, .privacy-card ol li {
+      padding: 6px 0 6px 24px;
+      position: relative;
+      font-size: 0.96rem;
+      border-bottom: 1px solid #f2f3f5;
+    }
+    .privacy-card ul li:last-child, .privacy-card ol li:last-child {
+      border-bottom: none;
+    }
+    .privacy-card ul li::before {
+      content: '\F270'; /* bi-check2 */
+      font-family: "bootstrap-icons";
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      color: #37517e;
+      font-size: 0.8rem;
+    }
+    .privacy-card ol {
+      counter-reset: ol-counter;
+    }
+    .privacy-card ol li {
+      counter-increment: ol-counter;
+    }
+    .privacy-card ol li::before {
+      content: counter(ol-counter);
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background: #47b2e4;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── Styled Table ── */
+    .privacy-table-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      margin-top: 10px;
+    }
+    .privacy-table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .privacy-table-wrap thead tr {
+      background: #37517e;
+      color: #fff;
+    }
+    .privacy-table-wrap thead th {
+      padding: 14px 18px;
+      font-weight: 600;
+      text-align: left;
+      letter-spacing: 0.3px;
+    }
+    .privacy-table-wrap tbody tr {
+      background: #fff;
+      transition: background 0.15s;
+    }
+    .privacy-table-wrap tbody tr:nth-child(even) {
+      background: #f7fbff;
+    }
+    .privacy-table-wrap tbody tr:hover {
+      background: #ebf5fb;
+    }
+    .privacy-table-wrap tbody td {
+      padding: 12px 18px;
+      color: #444;
+      border-bottom: 1px solid #eaf1f8;
+      vertical-align: top;
+    }
+    .privacy-table-wrap tbody td:first-child {
+      font-weight: 600;
+      color: #37517e;
+    }
+    .legal-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
       font-weight: 600;
     }
-    .back-link:hover {
-      color: #3792c3;
+    .legal-badge.contract { background: #e8f5e9; color: #2e7d32; }
+    .legal-badge.consent  { background: #fff3e0; color: #e65100; }
+    .legal-badge.legit    { background: #ede7f6; color: #4527a0; }
+
+    /* ── Alert / Info boxes ── */
+    .privacy-info-box {
+      background: #f5f6f8;
+      border-left: 3px solid #37517e;
+      border-radius: 0 6px 6px 0;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .privacy-info-box i {
+      color: #37517e;
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .privacy-info-box p { margin: 0; font-size: 0.92rem; }
+
+    /* ── Contact box ── */
+    .privacy-contact-box {
+      background: #2d3e5c;
+      border-radius: 10px;
+      padding: 26px 28px;
+      color: #fff;
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .privacy-contact-box i {
+      font-size: 1.8rem;
+      opacity: 0.8;
+    }
+    .privacy-contact-box h4 {
+      margin: 0 0 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .privacy-contact-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+    }
+    .privacy-contact-box a {
+      color: #a8c7e8;
+      font-weight: 600;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #37517e;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 28px;
+    }
+    .back-btn:hover {
+      background: #2d3e5c;
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+      .privacy-toc { position: static; margin-bottom: 30px; }
+      .privacy-card { padding: 28px 22px; }
+      .privacy-hero h1 { font-size: 2rem; }
+    }
+    @media (max-width: 576px) {
+      .privacy-hero { padding: 120px 0 60px; }
+      .privacy-card h2 { font-size: 1.15rem; }
     }
   </style>
 </head>
 
-<body>
+<body class="index-page">
 
-  <main id="main">
+  <!-- ======== Header (identique à index.html) ======== -->
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #c51b2b;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-    <!-- ======= Privacy Policy Section ======= -->
-    <section class="privacy-content">
-      <div class="container">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo acuueil.png" alt="moobilpay logo" class="logo-img">
+        <h1 class="sitename">moobilpay</h1>
+      </a>
 
-        <div class="section-title">
-          <h2>Politique de Confidentialité</h2>
-          <p>Dernière mise à jour : Mai 2026</p>
-        </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">A propos</a></li>
+          <li><a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a></li>
+          <li><a href="index.html#pricing" data-i18n="nav_pricing">Plans</a></li>
+          <li><a href="index.html#coming-soon" data-i18n="nav_launch">Lancement</a></li>
+          <li><a href="support.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-        <div class="row">
-          <div class="col-lg-12">
-            
-            <p>Bienvenue sur <strong>MoobilPay</strong>. Nous accordons une grande importance à la protection de vos données personnelles et au respect de votre vie privée. Cette politique explique comment nous collectons, utilisons, et protégeons vos informations lorsque vous utilisez notre application mobile iOS/Android et nos services.</p>
-
-            <h2>1. Données collectées</h2>
-            <p>Lors de l'utilisation de MoobilPay, nous pouvons être amenés à collecter les données suivantes :</p>
-            <ul>
-              <li><strong>Informations d'identification :</strong> Adresse e-mail, nom et prénom (notamment via la connexion Google, Apple ou la création de compte).</li>
-              <li><strong>Identifiants techniques :</strong> Identifiants d'appareils, jetons de notifications (Push), et adresse IP.</li>
-              <li><strong>Informations de transaction :</strong> Historique de vos transactions réalisées via l'application pour des besoins de suivi et de sécurité.</li>
-            </ul>
-
-            <h2>2. Utilisation de vos données</h2>
-            <p>Nous utilisons vos informations personnelles uniquement pour :</p>
-            <ul>
-              <li>Fournir, maintenir et améliorer nos services de paiement et les fonctionnalités de l'application.</li>
-              <li>Gérer votre compte utilisateur et assurer la sécurité des transactions.</li>
-              <li>Vous envoyer des notifications importantes concernant vos paiements ou les mises à jour du service.</li>
-              <li>Répondre à vos demandes de support technique.</li>
-            </ul>
-
-            <h2>3. Partage des données</h2>
-            <p>MoobilPay ne vend **jamais** vos données personnelles à des tiers. Vos données peuvent être partagées de manière sécurisée uniquement avec :</p>
-            <ul>
-              <li>Nos partenaires financiers et opérateurs téléphoniques (ex: MTN, Orange) dans le seul but de traiter vos transactions.</li>
-              <li>Des prestataires de services techniques de confiance (ex: Firebase pour l'authentification et l'hébergement de base de données).</li>
-              <li>Les autorités légales si la loi nous y oblige.</li>
-            </ul>
-
-            <h2>4. Sécurité des données</h2>
-            <p>Nous mettons en œuvre des mesures de sécurité strictes (chiffrement des communications de bout en bout, serveurs sécurisés) pour protéger vos informations contre l'accès non autorisé, l'altération ou la destruction.</p>
-
-            <h2>5. Vos droits</h2>
-            <p>Vous avez le droit d'accéder, de modifier ou de supprimer vos données personnelles à tout moment. Vous pouvez également supprimer votre compte directement depuis l'application ou en nous contactant.</p>
-
-            <h2>6. Nous contacter</h2>
-            <p>Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits, veuillez nous contacter à l'adresse e-mail suivante : <strong>contact@moobilpay.com</strong> (ou via le formulaire de contact de notre site).</p>
-
-            <a href="index.html" class="back-link"><i class="bi bi-arrow-left"></i> Retour au site MoobilPay</a>
-
-          </div>
-        </div>
-
+      <!-- Language Switcher -->
+      <div class="lang-switcher-container">
+        <button type="button" id="lang-switcher" class="lang-switcher" title="Changer de langue / Change language">
+          <span class="lang-flag">🇫🇷</span>
+          <span class="lang-text">FR</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
       </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ======== Page Header ======== -->
+    <div class="privacy-page-header">
+      <div class="container">
+        <div class="ph-inner">
+
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <a href="index.html"><i class="bi bi-house-door-fill"></i>Accueil</a>
+            <i class="bi bi-chevron-right breadcrumb-sep"></i>
+            <span class="breadcrumb-current">Politique de confidentialité</span>
+          </nav>
+
+          <!-- Title -->
+          <div class="ph-title-block">
+            <div class="ph-icon">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <div class="ph-text">
+              <h1>Politique de confidentialité<span class="ph-accent"></span></h1>
+              <div class="ph-date">
+                <i class="bi bi-calendar3"></i>
+                Dernière mise à jour : 29 mai 2026
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== Content ======== -->
+    <section class="privacy-section">
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Sidebar TOC -->
+          <div class="col-lg-3" data-aos="fade-right">
+            <div class="privacy-toc">
+              <h5><i class="bi bi-list-ul me-2"></i>Sommaire</h5>
+              <ul>
+                <li><a href="#intro"><i class="bi bi-dot"></i>1. Introduction</a></li>
+                <li><a href="#editeur"><i class="bi bi-dot"></i>2. Éditeur</a></li>
+                <li><a href="#donnees"><i class="bi bi-dot"></i>3. Données collectées</a></li>
+                <li><a href="#finalites"><i class="bi bi-dot"></i>4. Finalités</a></li>
+                <li><a href="#auth"><i class="bi bi-dot"></i>5. Authentification</a></li>
+                <li><a href="#tiers"><i class="bi bi-dot"></i>6. Services tiers</a></li>
+                <li><a href="#transferts"><i class="bi bi-dot"></i>7. Transferts intl.</a></li>
+                <li><a href="#conservation"><i class="bi bi-dot"></i>8. Conservation</a></li>
+                <li><a href="#droits"><i class="bi bi-dot"></i>9. Vos droits</a></li>
+                <li><a href="#suppression"><i class="bi bi-dot"></i>10. Suppression</a></li>
+                <li><a href="#securite"><i class="bi bi-dot"></i>11. Sécurité</a></li>
+                <li><a href="#mineurs"><i class="bi bi-dot"></i>12. Mineurs</a></li>
+                <li><a href="#marques"><i class="bi bi-dot"></i>13. Marques tierces</a></li>
+                <li><a href="#modifications"><i class="bi bi-dot"></i>14. Modifications</a></li>
+                <li><a href="#contact"><i class="bi bi-dot"></i>15. Nous contacter</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main content -->
+          <div class="col-lg-9" data-aos="fade-up">
+            <div class="privacy-card">
+
+              <!-- 1 -->
+              <h2 id="intro" class="section-anchor">
+                <i class="bi bi-info-circle" style="color:#37517e; font-size:1rem;"></i>
+                1. Introduction
+              </h2>
+              <p>
+                MoobilPay est une application mobile de <strong>suivi et de gestion
+                d'abonnements personnels</strong>, conçue pour les utilisateurs de Mobile
+                Money en Afrique. La présente politique explique quelles données nous
+                collectons, comment nous les utilisons, avec qui nous les partageons et
+                quels sont vos droits.
+              </p>
+              <p>
+                En utilisant MoobilPay, vous acceptez les pratiques décrites dans cette
+                politique.
+              </p>
+
+              <!-- 2 -->
+              <h2 id="editeur" class="section-anchor">
+                <i class="bi bi-building" style="color:#37517e; font-size:1rem;"></i>
+                2. Éditeur
+              </h2>
+              <ul>
+                <li><strong>Éditeur :</strong> MoobilPay</li>
+                <li><strong>Adresse :</strong> Ngousso, Centre 1200, Yaoundé, Cameroun</li>
+                <li><strong>Contact :</strong> contact@moobilpay.com</li>
+              </ul>
+
+              <!-- 3 -->
+              <h2 id="donnees" class="section-anchor">
+                <i class="bi bi-database" style="color:#37517e; font-size:1rem;"></i>
+                3. Données que nous collectons
+              </h2>
+
+              <h3>3.1 Données fournies par vous</h3>
+              <ul>
+                <li><strong>Nom et prénom</strong> — saisis à l'inscription ou récupérés depuis votre compte Apple / Google.</li>
+                <li><strong>Adresse e-mail</strong> — pour la création du compte et la communication.</li>
+                <li><strong>Numéro de téléphone</strong> — utilisé pour identifier votre compte Mobile Money (MTN, Orange) et pour le suivi de vos paiements.</li>
+                <li><strong>Mot de passe</strong> — uniquement si vous choisissez l'auth par e-mail/mot de passe ; il est chiffré côté Firebase et jamais visible par nous.</li>
+                <li><strong>Données d'abonnement</strong> que vous enregistrez : nom du service suivi, montant, périodicité, date d'échéance.</li>
+              </ul>
+
+              <h3>3.2 Données générées par l'utilisation</h3>
+              <ul>
+                <li><strong>Identifiant utilisateur unique (UID Firebase)</strong> — généré automatiquement pour rattacher vos données à votre compte.</li>
+                <li><strong>Jeton de notification push (FCM / APNs)</strong> — pour vous envoyer des rappels d'échéance.</li>
+                <li><strong>Historique de suivi des paiements</strong> : montants, devises, opérateur (MTN, Orange), statut, horodatage. Ces enregistrements reflètent vos paiements personnels et servent à votre suivi budgétaire.</li>
+                <li><strong>Identifiants techniques</strong> : modèle d'appareil, version iOS / Android, version de l'application, adresse IP.</li>
+              </ul>
+
+              <h3>3.3 Données que nous ne collectons PAS</h3>
+              <div class="privacy-info-box">
+                <i class="bi bi-shield-check-fill"></i>
+                <p>MoobilPay n'accède jamais à votre localisation, vos contacts, vos photos, votre caméra ou votre microphone.</p>
+              </div>
+              <ul>
+                <li>Aucune donnée de localisation.</li>
+                <li>Aucun accès aux contacts, photos, caméra, micro.</li>
+                <li>Aucun identifiant de connexion à un service tiers (Netflix, Spotify, etc.) n'est demandé, transmis ou stocké.</li>
+                <li>Aucune donnée de santé.</li>
+                <li>Aucun identifiant publicitaire (IDFA).</li>
+              </ul>
+
+              <!-- 4 -->
+              <h2 id="finalites" class="section-anchor">
+                <i class="bi bi-bullseye" style="color:#37517e; font-size:1rem;"></i>
+                4. Finalités d'utilisation
+              </h2>
+              <div class="privacy-table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Donnée</th>
+                      <th>Finalité</th>
+                      <th>Base légale</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Email, mot de passe, UID</td>
+                      <td>Création et sécurisation du compte</td>
+                      <td><span class="legal-badge contract">Exécution du contrat</span></td>
+                    </tr>
+                    <tr>
+                      <td>Nom, prénom</td>
+                      <td>Personnalisation de l'expérience</td>
+                      <td><span class="legal-badge contract">Exécution du contrat</span></td>
+                    </tr>
+                    <tr>
+                      <td>Numéro de téléphone</td>
+                      <td>Identification Mobile Money, suivi des paiements</td>
+                      <td><span class="legal-badge contract">Exécution du contrat</span></td>
+                    </tr>
+                    <tr>
+                      <td>Jeton FCM</td>
+                      <td>Envoi de rappels et notifications</td>
+                      <td><span class="legal-badge consent">Consentement (révocable)</span></td>
+                    </tr>
+                    <tr>
+                      <td>Historique d'abonnements / paiements</td>
+                      <td>Suivi budgétaire personnel</td>
+                      <td><span class="legal-badge contract">Exécution du contrat</span></td>
+                    </tr>
+                    <tr>
+                      <td>Données techniques (IP, modèle, OS)</td>
+                      <td>Sécurité, diagnostic</td>
+                      <td><span class="legal-badge legit">Intérêt légitime</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- 5 -->
+              <h2 id="auth" class="section-anchor">
+                <i class="bi bi-key" style="color:#37517e; font-size:1rem;"></i>
+                5. Authentification
+              </h2>
+              <p>MoobilPay propose plusieurs méthodes de connexion :</p>
+              <ul>
+                <li><strong>Sign in with Apple</strong> — conforme aux exigences Apple (Guideline 4.8). Si vous utilisez « Masquer mon e-mail », seul l'identifiant relais Apple est conservé. Vous pouvez révoquer l'accès à tout moment depuis <em>Réglages iOS → Apple ID → Connexion avec Apple</em>.</li>
+                <li><strong>Google Sign-In</strong> — via le SDK officiel Google.</li>
+                <li><strong>Email / mot de passe</strong> — via Firebase Authentication.</li>
+              </ul>
+
+              <!-- 6 -->
+              <h2 id="tiers" class="section-anchor">
+                <i class="bi bi-diagram-3" style="color:#37517e; font-size:1rem;"></i>
+                6. Services tiers et sous-traitants
+              </h2>
+              <p>
+                Nous utilisons des prestataires techniques pour faire fonctionner l'app.
+                Aucun ne reçoit vos données à des fins publicitaires.
+              </p>
+              <ul>
+                <li><strong>Apple Inc.</strong> (États-Unis) — Sign in with Apple, notifications APNs.</li>
+                <li><strong>Google LLC / Firebase</strong> (États-Unis) — Authentication, Firestore (base de données), Cloud Messaging (FCM).</li>
+                <li><strong>Expo (650 Industries, Inc.)</strong> (États-Unis) — service de notifications push.</li>
+                <li><strong>Fly.io</strong> (États-Unis) — hébergement du serveur backend.</li>
+              </ul>
+              <div class="privacy-info-box">
+                <i class="bi bi-info-circle-fill"></i>
+                <p>
+                  Les services Mobile Money cités dans l'application (MTN Mobile Money, Orange Money) et les services d'abonnement que vous suivez (Netflix, Spotify, etc.) sont mentionnés à titre informatif pour vous permettre d'identifier vos propres paiements et abonnements. <strong>MoobilPay n'est affilié à aucun de ces services, n'agit pas comme intermédiaire technique pour leur compte, et ne stocke aucun identifiant de connexion à ces services.</strong>
+                </p>
+              </div>
+
+              <!-- 7 -->
+              <h2 id="transferts" class="section-anchor">
+                <i class="bi bi-globe2" style="color:#37517e; font-size:1rem;"></i>
+                7. Transferts internationaux
+              </h2>
+              <p>
+                Les serveurs de Google (Firebase) et Apple sont situés aux États-Unis.
+                Vos données peuvent donc être traitées hors de l'Union européenne et hors
+                de votre pays de résidence. Ces transferts sont encadrés par les clauses
+                contractuelles types adoptées par la Commission européenne et par les
+                engagements de conformité de Google et d'Apple.
+              </p>
+
+              <!-- 8 -->
+              <h2 id="conservation" class="section-anchor">
+                <i class="bi bi-clock-history" style="color:#37517e; font-size:1rem;"></i>
+                8. Durée de conservation
+              </h2>
+              <ul>
+                <li><strong>Compte utilisateur</strong> : conservé tant que le compte est actif. Supprimé dans un délai maximum de <strong>30 jours</strong> après votre demande.</li>
+                <li><strong>Historique de suivi de paiements</strong> : conservé tant que le compte est actif ; supprimé avec le compte.</li>
+                <li><strong>Logs techniques</strong> : <strong>90 jours</strong> maximum.</li>
+                <li><strong>Jeton FCM</strong> : supprimé à la désinstallation ou à la révocation des notifications.</li>
+              </ul>
+
+              <!-- 9 -->
+              <h2 id="droits" class="section-anchor">
+                <i class="bi bi-person-check" style="color:#37517e; font-size:1rem;"></i>
+                9. Vos droits
+              </h2>
+              <p>Vous disposez des droits suivants :</p>
+              <ul>
+                <li><strong>Accès</strong> — obtenir une copie de vos données.</li>
+                <li><strong>Rectification</strong> — corriger des données inexactes, directement dans l'app ou par e-mail.</li>
+                <li><strong>Suppression</strong> — supprimer votre compte depuis l'app (<em>Paramètres → Supprimer mon compte</em>) ou par e-mail.</li>
+                <li><strong>Opposition</strong> — désactiver les notifications dans <em>Réglages iOS → Notifications → MoobilPay</em>.</li>
+                <li><strong>Portabilité</strong> — recevoir vos données dans un format lisible, sur demande.</li>
+                <li><strong>Réclamation</strong> — auprès de l'autorité de contrôle compétente (CNIL en France, ANTIC au Cameroun, etc.).</li>
+              </ul>
+              <p>
+                Pour exercer un droit, écrivez à <strong>contact@moobilpay.com</strong>.
+                Nous répondons sous 30 jours maximum.
+              </p>
+
+              <!-- 10 -->
+              <h2 id="suppression" class="section-anchor">
+                <i class="bi bi-trash3" style="color:#37517e; font-size:1rem;"></i>
+                10. Suppression de votre compte
+              </h2>
+              <p>
+                Conformément à la Guideline 5.1.1(v) d'Apple, vous pouvez supprimer votre
+                compte directement depuis l'application :
+              </p>
+              <ol>
+                <li>Ouvrez l'application MoobilPay.</li>
+                <li>Allez dans <em>Paramètres</em> (ou <em>Profil</em>).</li>
+                <li>Sélectionnez <em>Supprimer mon compte</em>.</li>
+                <li>Confirmez la suppression.</li>
+              </ol>
+              <p>
+                Vous pouvez également demander la suppression par e-mail à
+                <strong>contact@moobilpay.com</strong>. La suppression est effective dans
+                un délai maximum de 30 jours.
+              </p>
+
+              <!-- 11 -->
+              <h2 id="securite" class="section-anchor">
+                <i class="bi bi-lock" style="color:#37517e; font-size:1rem;"></i>
+                11. Sécurité
+              </h2>
+              <p>
+                Vos données sont transmises en HTTPS (TLS 1.2+) et stockées de manière
+                sécurisée chez nos sous-traitants (Firebase, Fly.io). Les mots de passe
+                sont chiffrés par Firebase Authentication. Les jetons sensibles sont
+                stockés localement dans le Keychain iOS via expo-secure-store.
+              </p>
+              <p>
+                Aucune méthode de transmission ou de stockage n'est totalement sécurisée.
+                En cas d'incident affectant vos données, nous vous en informerons dans les
+                meilleurs délais.
+              </p>
+
+              <!-- 12 -->
+              <h2 id="mineurs" class="section-anchor">
+                <i class="bi bi-person-x" style="color:#37517e; font-size:1rem;"></i>
+                12. Mineurs
+              </h2>
+              <p>
+                MoobilPay n'est pas destiné aux enfants de moins de <strong>13 ans</strong>
+                (16 ans dans l'Union européenne). Nous ne collectons pas sciemment de
+                données d'enfants. Si vous pensez qu'un mineur a créé un compte, écrivez à
+                contact@moobilpay.com pour suppression.
+              </p>
+
+              <!-- 13 -->
+              <h2 id="marques" class="section-anchor">
+                <i class="bi bi-patch-check" style="color:#37517e; font-size:1rem;"></i>
+                13. Marques tierces
+              </h2>
+              <p>
+                Les noms et marques des services tiers cités dans l'application (Netflix,
+                Spotify, MTN, Orange, etc.) sont la propriété de leurs détenteurs
+                respectifs. Ils sont utilisés à titre purement descriptif pour permettre
+                aux utilisateurs d'identifier leurs propres abonnements et paiements.
+                MoobilPay n'a aucun partenariat, affiliation ou lien commercial avec ces
+                services.
+              </p>
+
+              <!-- 14 -->
+              <h2 id="modifications" class="section-anchor">
+                <i class="bi bi-pencil-square" style="color:#37517e; font-size:1rem;"></i>
+                14. Modifications
+              </h2>
+              <p>
+                Cette politique peut évoluer. La date de dernière mise à jour est indiquée
+                en haut. En cas de changement substantiel, nous vous en informerons via
+                l'application ou par e-mail.
+              </p>
+
+              <!-- 15 -->
+              <h2 id="contact" class="section-anchor">
+                <i class="bi bi-envelope" style="color:#37517e; font-size:1rem;"></i>
+                15. Nous contacter
+              </h2>
+              <div class="privacy-contact-box">
+                <i class="bi bi-headset"></i>
+                <div>
+                  <h4>Une question sur vos données ?</h4>
+                  <p>
+                    E-mail : <a href="mailto:contact@moobilpay.com">contact@moobilpay.com</a><br>
+                    Éditeur : MoobilPay — Ngousso, Centre 1200, Yaoundé, Cameroun
+                  </p>
+                </div>
+              </div>
+
+              <a href="index.html" class="back-btn">
+                <i class="bi bi-arrow-left"></i>
+                Retour à l'accueil
+              </a>
+
+            </div><!-- /privacy-card -->
+          </div><!-- /col -->
+
+        </div><!-- /row -->
+      </div><!-- /container -->
     </section>
 
   </main>
 
+  <!-- ======== Footer ======== -->
+  <footer id="footer" class="footer position-relative" style="background: linear-gradient(145deg, #b01826 0%, #d81e2f 100%); color: #ffffff; overflow: hidden; padding-top: 80px; padding-bottom: 30px;">
+    
+    <!-- Beautiful Background Shapes for Depth -->
+    <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.05); border-radius: 50%; filter: blur(20px);"></div>
+    <div style="position: absolute; bottom: -100px; left: -50px; width: 400px; height: 400px; background: rgba(0,0,0,0.05); border-radius: 50%;"></div>
+
+    <div class="container position-relative z-form">
+      <div class="row gy-5">
+        <!-- Brand & Description -->
+        <div class="col-lg-4 col-md-6 footer-about pe-lg-5">
+          <a href="index.html" class="logo d-flex align-items-center text-decoration-none mb-4" style="display: inline-block;">
+             <img src="assets/img/logo acuueil.png" alt="Moobilpay" style="max-height: 50px; margin-right: 12px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));">
+             <span class="sitename" style="font-size: 30px; font-weight: 800; color: #ffffff; text-transform: lowercase; letter-spacing: -0.5px; text-shadow: 0px 2px 4px rgba(0,0,0,0.3);">moobilpay</span>
+          </a>
+          <p class="mb-4" data-i18n="footer_desc" style="font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9);">
+            Votre partenaire de confiance pour des paiements simples, rapides et sécurisés. Profitez de vos services de streaming sans tracas.
+          </p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=61585335707804" target="_blank" title="Rejoignez-nous sur Facebook" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 12px; background: rgba(255, 255, 255, 0.15); font-size: 20px; color: #fff; margin-right: 15px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none;" onmouseover="this.style.backgroundColor='#fff'; this.style.color='#c51b2b'; this.style.transform='translateY(-5px) scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.color='#fff'; this.style.transform='translateY(0) scale(1)';">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Liens utiles</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="index.html#hero" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Accueil</a></li>
+            <li><a href="index.html#about" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">À propos</a></li>
+            <li><a href="index.html#features" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Fonctionnalités</a></li>
+            <li><a href="index.html#pricing" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Privacy & Support -->
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Assistance</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2.8;">
+            <li><a href="politique-confidentialite.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Politique de confidentialité</a></li>
+            <li><a href="support.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s; display: inline-block;" onmouseover="this.style.color='#fff'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateX(0)';">Support Client</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-12 footer-contact text-md-start">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 25px; letter-spacing: 0.5px;">Contact</h4>
+          
+          <div style="display: flex; align-items: flex-start; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px; margin-top: 2px;">
+              <i class="bi bi-geo-alt" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <div>
+              <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.5;">Ngousso, Centre 1200<br>Yaoundé, Cameroun</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-bottom: 18px;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-telephone" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">+237 698 178 925</p>
+          </div>
+
+          <div style="display: flex; align-items: center;">
+            <div style="background: rgba(255,255,255,0.15); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+              <i class="bi bi-envelope" style="font-size: 16px; color: #fff;"></i>
+            </div>
+            <p style="margin: 0; font-size: 15px; color: rgba(255, 255, 255, 0.9);">contact@moobilpay.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 30px;">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <div class="copyright" style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            &copy; 2026 <strong>Moobilpay</strong>. Tous droits réservés.
+          </div>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div style="font-size: 14px; color: rgba(255,255,255,0.8);">
+            <span data-i18n="footer_copyright_prefix">Avec</span> <strong style="color: #fff; font-weight: 700;">moobilpay</strong> <span data-i18n="footer_copyright_suffix">profitez d'un service simple et rapide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Translation System -->
+  <script src="assets/js/translations.js"></script>
+
 </body>
+
 </html>
